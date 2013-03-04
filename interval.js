@@ -2,21 +2,21 @@
  * An abortable, promise-returning setInterval wrapper
  */
 define([ "jquery" ], function ($) {
-	function Interval(delay) {
-		var interval = $.Deferred(),
-			id = window.setInterval(interval.notify, delay);
+    function Interval(delay) {
+        var interval = $.Deferred(),
+            id = window.setInterval(interval.notify, delay);
 
-		interval.promise(this);
+        interval.promise(this);
 
-		this.abort = function () {
-			window.clearInterval(id);
-			interval.reject();
-		};
-	}
+        this.abort = function () {
+            window.clearInterval(id);
+            interval.reject();
+        };
+    }
 
-	$.setInterval = $.setInterval || function (delay) {
-		return new Interval(delay);
-	};
+    $.setInterval = $.setInterval || function (delay) {
+        return new Interval(delay);
+    };
 
-	return Interval;
+    return Interval;
 });
