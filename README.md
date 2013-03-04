@@ -5,7 +5,7 @@ A set of asynchronous operation wrappers that return Promise interfaces augmente
 
 Wraps a `window.setTimeout()` call.
 
-Usage:
+### Usage
 
 ```js
 require([ "jquery", "timeout" ], function ($, Timeout) {
@@ -29,7 +29,7 @@ require([ "jquery", "timeout" ], function ($, Timeout) {
 
 Wraps a `window.setInterval()` call.
 
-Usage:
+### Usage
 
 ```js
 require([ "jquery", "interval" ], function ($, Interval) {
@@ -52,7 +52,7 @@ require([ "jquery", "interval" ], function ($, Interval) {
 
 Wraps an HTML5 `<audio>` tag playback.
 
-Usage:
+### Usage
 
 ```js
 require([ "jquery", "audioplayback" ], function ($, AudioPlayback) {
