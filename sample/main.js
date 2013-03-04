@@ -7,26 +7,26 @@ require.config({
 define([ "jquery", "../timeout", "../interval", "../audioplayback" ], function () {
     var timeout = $.setTimeout(2000)
         .done(function () {
-            console.log("2 sec timeout expired");
+            console.log("Timeout expired");
         })
         .fail(function () {
-            console.log("timeout aborted");
+            console.log("Timeout aborted");
         });
 
     var interval = $.setInterval(1000)
         .progress(function () {
-            console.log("1 sec interval fired");
+            console.log("Interval fired");
         })
         .fail(function () {
-            console.log("interval aborted");
+            console.log("Interval aborted");
         });
 
     var playback = $.playbackAudio("clbone.wav")
         .done(function () {
-            console.log("playback complete");
+            console.log("Playback complete");
         })
         .fail(function () {
-            console.log("playback aborted");
+            console.log("Playback aborted/failed");
         });
 
     //timeout.abort();
