@@ -71,3 +71,7 @@ require([ "jquery", "audioplayback" ], function ($, AudioPlayback) {
 	$("#abort_playback").click(playback.abort);
 });
 ```
+
+## License
+
+MIT
